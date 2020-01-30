@@ -15,6 +15,7 @@ parking_list.append(parking_slot_2)
 parking_list.append(parking_slot_3)
 
 
+# car_1 = car(number=1, pos_x=[250, 350], pos_y=[250, 350])
 car_1 = car(number=1, pos_x=[0, 0], pos_y=[0, 0])
 car_2 = car(number=2, pos_x=[0, 0], pos_y=[0, 0])
 car_3 = car(number=3, pos_x=[0, 0], pos_y=[0, 0])
@@ -42,11 +43,6 @@ car_list.append(car_5)
 
 while True:
 
-    # car_1.pos_x[0] = random.randint(200, 700)
-    # car_1.pos_x[1] = random.randint(200, 700)
-    # car_1.pos_y[0] = random.randint(200, 700)
-    # car_1.pos_y[0] = random.randint(200, 700)
-
     for car in car_list:
         car.pos_x = [random.randint(200, 800), random.randint(200, 800)]
         car.pos_y = [random.randint(200, 800), random.randint(200, 800)]
@@ -64,9 +60,10 @@ while True:
             car_center = parking_slot.car.get_car_center()
             print('Slot:', parking_slot.number,
                   status, 'Car: ', parking_slot.car.number, box, car_center)
+            # print(empty_time)
         except AttributeError as e:
             print('Slot:', parking_slot.number,
                   status, parking_slot.car, box)
 
     print('-----------------------------------------\n')
-    time.sleep(1)
+    time.sleep(5)
