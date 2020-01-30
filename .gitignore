@@ -1,2 +1,4 @@
 /venv/*
 .vscode/*
+playground.py
+__pycache__/*
